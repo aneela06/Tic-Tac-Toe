@@ -1,2 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.cell {
+  border: 1px #000000 solid;
+  height: 40px;
+}
