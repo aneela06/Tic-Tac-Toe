@@ -1,7 +1,33 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+.container-fluid {
+  background-color: #b3c2bf;
+  color: #3b3a36;
+  text-align: center;
+}
+
 .cell {
-  border: 1px #000000 solid;
-  height: 40px;
+  border: 4px #c0dfd9 solid;
+  border-left: 0;
+  border-top: 0;
+  float: left;
+  height: 100px;
+  padding: 90px;
+  width: 100px;
+}
+
+.row2 {
+  clear: both;
+}
+
+.row3 {
+  clear: both;
+}
+
+.edge {
+  border-right:0;
+}
+.down {
+  border-bottom:0;
 }
