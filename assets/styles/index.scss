@@ -1,10 +1,23 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+nav{
+  position:fixed;
+  top:0;
+}
+
+.header{
+  vertical-align: middle;
+  width:100%;
+  padding: 30px auto;
+}
+
 .container-fluid {
   background-color: #b3c2bf;
   color: #3b3a36;
-  text-align: center;
+  margin: 20px auto;
+  padding-left: 30%;
+  padding-top: 30px;
 }
 
 .cell {
@@ -26,8 +39,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .edge {
-  border-right:0;
+  border-right: 0;
 }
+
 .down {
-  border-bottom:0;
+  border-bottom: 0;
 }
