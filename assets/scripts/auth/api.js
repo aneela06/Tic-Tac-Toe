@@ -1,62 +1,48 @@
 'use strict';
 
-const config = {
-  apiOrigins: {
-    production: 'http://aqueous-atoll-85096.herokuapp.com',
-    development: 'http://tic-tac-toe.wdibos.com',
-  },
-};
-
-// require('../config');
-
-const app = require('../app');
-
-// const getFormFields = require('../../../lib/get-form-fields.js');
-
-//authApi.signUp(authUi.success, authUi.failure, data);
+const config = require('../config');
+const store = require('../store');
 
 const signUp = function (data) {
-  console.log(data);
   return $.ajax({
-    url: config.apiOrigins + '/sign-up/',
+    url: config.apiOrigin + '/sign-up',
     method: 'POST',
     data,
   });
 };
 
 const signIn = function (data) {
-  console.log(data);
   return $.ajax({
-    url: config.apiOrigins + '/sign-in/',
+    url: config.apiOrigin + '/sign-in',
     method: 'POST',
+    data,
+  });
+};
+
+const changePassword = function (data) {
+  return $.ajax({
+    url: `${config.apiOrigin}/change-password/${store.user.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
     data,
   });
 };
 
 const signOut = function () {
   return $.ajax({
+    url: `${config.apiOrigin}/sign-out/${store.user.id}`,
     method: 'DELETE',
-    url: config.apiOrigins + '/sign-out/' + app.user.id,
     headers: {
-      Authorization: 'Token token=' + app.user.token,
+      Authorization: `Token token=${store.user.token}`,
     },
-  });
-};
-
-const changePassword = function (data) {
-  return $.ajax({
-    method: 'PATCH',
-    url: config.apiOrigins + '/change-password/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-    data: data,
   });
 };
 
 module.exports = {
   signUp,
   signIn,
-  signOut,
   changePassword,
+  signOut,
 };

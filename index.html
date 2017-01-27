@@ -12,32 +12,53 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <!-- <nav>
-        <ul>
-          <li>Sign up</li>
-          <li>Sign in</li>
-          <li>Change Password</li>
-          <li>Sign out</li>
-        </ul>
-      </nav> -->
+      <div>
+      <form id="sign-up">
+        <fieldset>
+          <input type="text" name="credentials[email]" value="" placeholder="email">
+          <input type="password" name="credentials[password]" value="" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+      <form id="sign-in">
+        <fieldset>
+          <input type="text" name="credentials[email]" value="" placeholder="email">
+          <input type="password" name="credentials[password]" value="" placeholder="password">
+          <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+      <form id="sign-out">
+        <fieldset>
 
-      <h1 class='header'>Tic-Tac-Toe</h1>
+          <input type="submit" name="submit" value="Sign out!">
+        </fieldset>
+      </form>
+      <form id="change-password">
+        <fieldset>
+
+          <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+          <input type="password" name="passwords[new]" value="" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password">
+        </fieldset>
+      </form>
       <div class="square">
         <div class="row1">
-          <div class="cell" data-name=0> Hi </div>
-          <div class="cell" data-name=1> Hi </div>
-          <div class="cell edge" data-name=2> Hi </div>
+          <div class="cell"data-name=0 id="0"></div>
+          <div class="cell"data-name=1 id="1"></div>
+          <div class="cell edge"data-name=2 id="2"></div>
         </div>
         <div class="row2">
-          <div class="cell" data-name=3>Hi</div>
-          <div class="cell" data-name=4>Hi</div>
-          <div class="cell edge" data-name=5>Hi</div>
+          <div class="cell"data-name=3 id="3"></div>
+          <div class="cell"data-name=4 id="4"></div>
+          <div class="cell edge"data-name=5 id="5"></div>
         </div>
         <div class="row3">
-          <div class="cell down" data-name=6>Hi</div>
-          <div class="cell down" data-name=7>Hi</div>
-          <div class="cell edge down" data-name=8>Hi</div>
+          <div class="cell down"data-name=6 id="6"></div>
+          <div class="cell down"data-name=7 id="7"></div>
+          <div class="cell edge down"data-name=8 id="8"></div>
         </div>
       </div>
+    </div>
     </body>
 </html>
