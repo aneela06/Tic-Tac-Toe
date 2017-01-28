@@ -1,27 +1,37 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-nav{
-  position:fixed;
-  top:0;
-}
-
-.header{
-  vertical-align: middle;
-  width:100%;
-  padding: 30px auto;
-}
-
 .container-fluid {
-  background-color: #b3c2bf;
-  color: #3b3a36;
+  background-color: #DDDDDF;
+  color: #7CB4B8;
   margin: 20px auto;
   padding-left: 30%;
   padding-top: 30px;
 }
 
+h1{
+  text-align: center;
+}
+
+.signup {
+  float: left;
+}
+
+.signin {
+  position: absolute;
+}
+
+.allbuttons {
+  padding: 2px;
+}
+
+.square {
+  margin: 80px;
+  padding-top: 10 0px;
+}
+//
 .cell {
-  border: 4px #c0dfd9 solid;
+  border: 4px #FF928B solid;
   border-left: 0;
   border-top: 0;
   float: left;
@@ -29,19 +39,19 @@ nav{
   padding: 90px;
   width: 100px;
 }
-
+//
 .row2 {
   clear: both;
 }
-
+//
 .row3 {
   clear: both;
 }
-
+//
 .edge {
   border-right: 0;
 }
-
+//
 .down {
   border-bottom: 0;
 }
