@@ -106,15 +106,15 @@ let isWinner = function () {
 
 //if cells are filled and the element is not empty you keep going?
 
-let cellFilled = function (element) {
-  if (element !== '') {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-board.every(cellFilled);
+// let cellFilled = function (element) {
+//   if (element !== '') {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+//
+// board.every(cellFilled);
 
 //reset board if everything works
 
@@ -123,38 +123,64 @@ let resetBoard = function () {
   board = ['', '', '', '', '', '', '', '', ''];
 };
 
+let isFilled = function (element) {
+  if (element !== '') {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+let catsEye = function(){
+  if (board.every(isFilled) === true){
+    resetBoard();
+    return true;
+  } else {
+    return false;
+  }
+};
+
 //the function takes in the place and the turn as long as its empty
 //it adds the x value and then changes turns to o,
 //then checks if the game is over and if it is
 // then reset the board and return the next person's turn.
 
-let placePiece = function (index) {
+let placePiece = function (index){
   if (board[index] === '') {
     if (turn === 'player_x') {
       board[index] = 'x';
       gameOver = isWinner();
       if (gameOver === true) {
-        alert('You WONNNN!!!!!');
+        console.log('You WONNNN!!!!!');
         resetBoard();
         return turn;
+      } else {
+        if (catsEye() === true){
+          resetBoard();
+          return turn;
+        } else {
+          turn = 'player_o';
+          return turn;
+        }
       }
-
-      turn = 'player_o';
-      return turn;
     } else if (turn === 'player_o') {
       board[index] = 'o';
       gameOver = isWinner();
       if (gameOver === true) {
-        alert('You WONNNN!!!!!');
-        resetBoard();
+        console.log('You WONNNN!!!!!');
+        resetBoard(board);
         return turn;
-      }
-
-      turn = 'player_x';
-      return turn;
-    }
-  }
-
+      } else {
+       if (catsEye() === true){
+         resetBoard();
+         return turn;
+       } else {
+         turn = 'player_x';
+         return turn;
+       }
+     }
+   }
+ }
   return turn;
 };
 
@@ -162,7 +188,7 @@ let placePiece = function (index) {
 
 let gameLogic = function () {
   let index = $(this).data('name');
-  turn = placePiece(index, turn);
+  turn = placePiece(index);
   console.log(board);
 };
 

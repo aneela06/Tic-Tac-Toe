@@ -12,6 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+      <h1>Tic Tac Toe</h1>
       <div>
       <form id="sign-up">
         <fieldset>
@@ -28,20 +29,20 @@
           <input type="submit" name="submit" value="Sign in!">
         </fieldset>
       </form>
-      <form id="sign-out">
+      <form class= "signout" id="sign-out">
         <fieldset>
-
           <input type="submit" name="submit" value="Sign out!">
         </fieldset>
       </form>
       <form id="change-password">
         <fieldset>
-
           <input type="password" name="passwords[old]" value="" placeholder="Old Password">
           <input type="password" name="passwords[new]" value="" placeholder="New Password">
           <input type="submit" name="submit" value="Change Password">
         </fieldset>
       </form>
+
+
       <div class="square">
         <div class="row1">
           <div class="cell"data-name=0 id="0"></div>
@@ -54,9 +55,9 @@
           <div class="cell edge"data-name=5 id="5"></div>
         </div>
         <div class="row3">
-          <div class="cell down"data-name=6 id="6"></div>
-          <div class="cell down"data-name=7 id="7"></div>
-          <div class="cell edge down"data-name=8 id="8"></div>
+          <div class="cell down" data-name=6 id="6"></div>
+          <div class="cell down" data-name=7 id="7"></div>
+          <div class="cell edge down" data-name=8 id="8"></div>
         </div>
       </div>
     </div>

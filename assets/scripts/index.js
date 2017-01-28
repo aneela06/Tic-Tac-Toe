@@ -15,8 +15,7 @@ $(() => {
 require('./example');
 
 // const api = require('./auth/api');
-// const game = require('./gameLogic/game');
-
+require('./gameLogic/game');
 const authEvents = require('./auth/events.js');
 
 // On document ready

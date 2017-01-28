@@ -1,15 +1,17 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-// .container-fluid {
-//   background-color: #DDDDDF;
-//   color: #7CB4B8;
-//   margin: 20px auto;
-//   padding-left: 30%;
-//   padding-top: 30px;
-// }
-//
+.container-fluid {
+  background-color: #DDDDDF;
+  color: #7CB4B8;
+  margin: 20px auto;
+  padding-left: 30%;
+  padding-top: 30px;
+}
 
+h1{
+  text-align: center;
+}
 
 .signup {
   float: left;
